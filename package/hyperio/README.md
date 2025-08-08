@@ -7,7 +7,7 @@
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=for-the-badge)](LICENSE)
 
-*{short_description}*
+*Buat Server menggunakan dart dengan mudah*
 
 ![](https://github.com/azkadev/hyperio/blob/main/assets/images/hyperio.jpg)
 
@@ -20,7 +20,7 @@
 
 
 
-**Hyperio** {description}
+**Hyperio** Library untuk membuat server menggunakan bahasa code dart, ini sangatlah mudah karena saya mencoba membuatnya mirip library umum
 
 - 🇮🇩 [Indonesia](https://github.com/azkadev/hyperio/blob/main/README.md)
 - 🇨🇿 [Afrika](https://github.com/azkadev/hyperio/blob/main/README_AFRIKA.md)
