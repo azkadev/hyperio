@@ -2,10 +2,10 @@ name: hyperio
 description: 'hyperio Azkadev'
 version: '0.0.0'
 publish_to: 'none'
-homepage: 'https://youtube.com/{youtube_username}'
+homepage: 'https://youtube.com/@azkadev'
 repository: 'https://github.com/azkadev/hyperio'
 issue_tracker: 'https://github.com/azkadev/hyperio/issues'
-documentation: 'https://youtube.com/{youtube_username}'
+documentation: 'https://youtube.com/@azkadev'
 funding:
   - 'https://github.com/sponsors/azkadev'
   - "https://www.patreon.com/c/azkadev"
