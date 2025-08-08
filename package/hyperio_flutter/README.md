@@ -9,16 +9,12 @@
 
 *{short_description}*
 
-![](https://github.com/azkadev/hyperio/blob/main/assets/images/hyperio.jpg)
-
 </div>
 
 ---
 
 
 # Hyperio
-
-
 
 **Hyperio** {description}
 
@@ -53,9 +49,18 @@
 
 sebelum memasang pastikan kamu mengetahui basic dart / flutter setidaknya kamu sudah menginstall flutter / dart dalam komputer / device kamu. [Flutter Website](https://flutter.dev)
 
-```bash
-dart pub add hyperio
-```
+- **Dart / Hanya Cli Tidak ada gui**
+  jika kamu ingin menggunakan tanpa gui
+  ```bash
+  dart pub add hyperio
+  ```
+
+- **Flutter gui**
+  pada dasarnya sama seperti dart
+
+  ```bash
+  flutter pub add hyperio_flutter
+  ```
 
 ## Dokumentasi
 
@@ -183,10 +188,10 @@ di atas itu hanyalah contoh, untuk menggunakan method lain isi saja data paramet
 # Penting
 
 - jika suatu saat program ini tidak berjalan perlu di ingat lagi saya tidak pernah membuat malware / code suspicous / fake mungkin karena waktu, penting memahami waktu code ini di buat dan framework yang saya pakai versi berapa. jangan asal menuduh!, saya bisa lepas kendali!
-- program yang saya buat pada dasarnya tidak bergantung banyak dependencies
-- di karenakan tidak bergantung banyak dependencies walaupun code saya tidak ada yang update kemungkinan masih bisa di pakai selama bahasa code program tidak mengalami perubahaan besar
 - semua program yang saya buat jika ada di official akun saya saya jamin 100% aman no malware, no suspicious- masih bingung kenapa kode saya / tidak bis compile? sebaiknya jika kamu merasa tidak sehat check dahulu ke dokter, jika kamu berperilaku menyimpang, trans*ender, l*bt atau hal lainya, obatin dahulu kamu sendiri itu bukan program saya yang suspicious / malware, saya tidak pernah melakukan hal buruk seperti itu, sebelum kamu membuat orang lain menjadi gila / mengikuti kamu, lebih baik kamu obatin dulu ya. jika masih ingin tetap mempelajari code saya, rasanya tidak mungkin karena saya bukan seorang trans*ender, l*bt jadi mungkin code program akan menyulitkan otak kamu
 - jika screenshot dan readme ada yang mencurigakan atau berbeda, percayalah saya tidak membuat program malware, suspicious, kemungkinan saya malas mengupdate, kamu bisa membuat issue untuk meminta saya update / berklarifikasi
+- program yang saya buat pada dasarnya tidak bergantung banyak dependencies
+- di karenakan tidak bergantung banyak dependencies walaupun code saya tidak ada yang update kemungkinan masih bisa di pakai selama bahasa code program tidak mengalami perubahaan besar
 
 ## Bantuan
 
