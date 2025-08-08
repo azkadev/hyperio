@@ -88,97 +88,33 @@ method wajib di panggil bebas mau setelah **on** / sebelum method **on** tapi sa
 ```
 
 
-### Initialized
+### All
 
-method ini wajib di panggil setelah method **on** karena untuk mengolah update
-
-**contoh:**
-
-```dart
-  await hyperioAzkadev.initialized();
-```
-
-### On
-
-method on ini berguna untuk mendapatkan update data dari invoke / update
+untuk mendapatkan http request method get,post,put,patch,head,delete dan lain lain
 
 **contoh:**
 
 ```dart
-  hyperioAzkadev.on("update", (Map update) async {
-    print(update);
+  hyperio.all("/", (req,res){
+    return res.send("oke");
   });
 ```
 
 
-### createClient
+### listen
 
-untuk membuat client baru pastikan kamu memanggil method.
+listen server
 
 **contoh:**
 
 ```dart
-final newClientId = hyperioAzkadev.createClient();
-print("New Client Id: ${newClientId}");
+await hyperio.listen(
+  port: 3000,
+  bindIp: "0.0.0.0",
+);
 ```
 
-
-### Invoke
-
-untuk memanggil api kamu perlu membaca dokumentasi langsung
-
-- [Url Docs](other_url_docs) mudah di baca untuk umum 
-
-disini saya hanya menyediakan parameters data map, map / json ini terdapat beberapa key penting
-
-
-| Key            | Description                                                                                                    | Value      | Wajib Diisi                                              |
-|----------------|----------------------------------------------------------------------------------------------------------------|------------|----------------------------------------------------------|
-| **@type**      | ini isi dengan method dari                                                                              | **String** | **ya**                                                   |
-| **@client_id** | ini berisi client id dari method **createClient**                                                              | **int**    | **jika untuk method sync ada yang wajib ada yang tidak** |
-| **@extra**     | isi dengan unique id karena method async tidak return data langsung jadi perlu extra sebagai kunci return data | **String** | **Tidak**                                                |
-
-
-jika sudah mengisi parameters wajib, kita lanjut bagaimana menginvoke api
-
-- **SetLogVerbosityLevel**
-  di karenakan ini method log maka kamu menggunakan method sync 
-  dan tidak wajib mengisi key **@client_id**
-
-  contoh: 
-
-
-```dart
-  hyperioAzkadev.invokeSync({
-    "@type": "setLogVerbosityLevel",
-    "new_verbosity_level": 0,
-  });
-```
-
-- **SendMessage**
-  untuk mengirim pesan menggunakan library ini pastikan client sudah login
-  [Referensi Dokumentasi SendMessage](url docs)
-
-```dart
-
-        /// ambil from createClient atau pembaruan
-        int client_id = 1;
-        final getMe = await hyperioAzkadev.invoke({
-          "@type": "getMe",
-          "@client_id": client_id,
-        });
-        print(getMe);
-        await hyperioAzkadev.invoke({
-          "@type": "sendMessage",
-          "@client_id": client_id,
-          "chat_id": getMe["id"],
-          "type": "text",
-          "text": "Hello",
-        });
-```
-
-di atas itu hanyalah contoh, untuk menggunakan method lain isi saja data parameters, pastikan parameters key wajib di isi sesuai table, maksud saya ada beberapa key yang wajib di isi, jika tidak ya akan mengirim data error
-
+di atas itu hanyalah sedikit contoh jika ingin contoh lebih banyak scroll ke atas saya membuatkan contoh
 
 # Penting
 

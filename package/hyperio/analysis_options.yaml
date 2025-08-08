@@ -12,5 +12,3 @@ linter:
   rules:
     - public_member_api_docs
     - always_declare_return_types
-formatter:
-  page_width: 9999999999

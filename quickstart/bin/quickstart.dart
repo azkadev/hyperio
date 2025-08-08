@@ -1,50 +1,28 @@
 
-import 'dart:io';
 
-import 'package:hyperio/core/core.dart' show Hyperio;
+import 'package:hyperio/hyperio.dart';
  
-
-Future<String> ask({
-  required String text,
-}) async {
-  while (true) {
-    print("");
-
-    stdout.write("${text}?: ");
-    // print("${text}?: ");
-    final String? input = stdin.readLineSync();
-    if (input != null && input.trim().isNotEmpty) {
-      return input.trim();
-    }
-  }
-}
-
+ 
 void main(List<String> args) async {
   print("start");
-  final Hyperio hyperio = Hyperio();
-
+  final HyperioAzkadev hyperio = HyperioAzkadev();
+  hyperio.onNotFound = (req, res){
+    return res.send("not found");
+  };
+  hyperio.onError = (req, res, error, stackTrace){
+    return res.send("Crash: ${error} - ${stackTrace}");
+  };
   hyperio.ensureInitialized();
-
-  // atur log menjadi 0
-  // karena tidak mungkin akan log di production mode
-  //
-  hyperio.invokeSync({
-    "@type": "setLogVerbosityLevel",
-    "new_verbosity_level": 0,
+  
+  hyperio.all("/", (req,res){
+    return res.send("oke");
   });
-
-  hyperio.on("update", (Map update) async {
-    print(update);
+  hyperio.post("/api", (req,res){
+    return res.send("hello");
   });
- 
-
-  await hyperio.initialized();
-  print("program started");
-  final newClientId = hyperio.createClient();
-
-  await hyperio.invoke({
-    "@type": "getAuthorizationState",
-    "@client_id": newClientId,
-  });
+  await hyperio.listen(
+    port: 3000,
+    bindIp: "0.0.0.0",
+  );
 }
 
